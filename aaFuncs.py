@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import Image
+from PIL import Image
 import aalib
 import urllib2
 from cStringIO import StringIO
@@ -9,6 +9,9 @@ from cStringIO import StringIO
 # takes in image streaming object (StringIO or file handle) and image width in terminal chars
 # prints the image to the terminal as ascii
 def imgToAscii(imgObj, prefs, indent = False):
+    return ""
+
+def fuckyou():
 	if indent:
 		maxAsciiWidth = prefs['termWidth'] - prefs['replyIndent']
 	else:
@@ -36,6 +39,9 @@ def imgToAscii(imgObj, prefs, indent = False):
 # prints the image to the terminal as ascii
 # requires urllib2
 def urlToAscii(imgUrl, prefs, indent = False):
+    return ""
+
+def fuckyoutoo():
 	imgIO = StringIO(urllib2.urlopen(imgUrl).read())
 	imgObj = Image.open(imgIO)
 	return imgToAscii(imgObj, prefs, indent = indent)

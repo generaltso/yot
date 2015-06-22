@@ -44,7 +44,7 @@ class Index(object):
 		self.jsonData = None
 		self.indexData = None
 		self.boardAbbr = ""
-		self.pageNum = 0
+		self.pageNum = 1 
 		self.indexJsonUrl = ""
 		self.threadList = []
 
@@ -66,7 +66,7 @@ class Index(object):
 		return self.pageNum
 
 	def updateJsonUrl(self):
-		self.indexJsonUrl = 'http://api.4chan.org/' + self.boardAbbr + '/' + str(self.pageNum) + '.json'
+		self.indexJsonUrl = 'http://a.4cdn.org/' + self.boardAbbr + '/' + str(self.pageNum) + '.json'
 	def getJsonUrl(self):
 		return self.indexJsonUrl
 	def refresh(self):
